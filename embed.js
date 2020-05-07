@@ -1,3 +1,15 @@
+const express = require("express");
+
+const app = express();
+
+app.listen(3000, () => {
+console.log("You app is listening to port 3000!") 
+})
+
+app.get("/", (req, res) => {
+res.sendStatus(200) //OK
+})
+
 const { Client, RichEmbed } = require("discord.js");
 
 const client = new Client({
